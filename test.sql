@@ -1,0 +1,7 @@
+SELECT MAX(id) AS client FROM CLIENT;
+SELECT MAX(id) AS plat FROM PLAT;
+SELECT MAX(id) AS commande FROM COMMANDE;
+SELECT MAX(id) AS ingredient FROM INGREDIENT;
+SELECT MAX(id) AS formule FROM FORMULE;
+SELECT idTransaction AS facture FROM FACTURE;
+

@@ -11,7 +11,7 @@ CREATE TABLE CLIENT(
    nomDeVoie VARCHAR(50),
    numeroDeVoie INT,
    typeDeVoie VARCHAR(50),
-   parain INT REFERENCES CLIENT(id)
+   parraine INT REFERENCES CLIENT(id)
 );
 
 CREATE TABLE LIVREUR(
@@ -102,7 +102,8 @@ CREATE TABLE COMMANDE(
    horaireLivraison TIMESTAMP,
    prix NUMBER(5, 2) NOT NULL,
    addresse INT REFERENCES ADDRESSE(id) NOT NULL,
-   livreur INT REFERENCES LIVREUR(id) NOT NULL
+   livreur INT REFERENCES LIVREUR(id) NOT NULL,
+   distance INT
 );
 
 CREATE TABLE FACTURE(
@@ -157,3 +158,4 @@ CREATE TABLE paye(
    montant NUMBER(5,2) NOT NULL,
    PRIMARY KEY(client, facture)
 );
+
